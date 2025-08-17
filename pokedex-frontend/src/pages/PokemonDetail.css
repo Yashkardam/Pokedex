@@ -1,0 +1,151 @@
+/* Soft subtle gray gradient background */
+.detail-container {
+  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+  color: #fff;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #020202, #2b2222);
+}
+
+/* Search bar top-right */
+.detail-search {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+}
+
+/* Search dropdown */
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  z-index: 10;
+}
+.autocomplete-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+.autocomplete-list li:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Layout: Image left, details right */
+.detail-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 80px;
+  flex-wrap: wrap;
+  color: #ffffff;
+}
+
+/* Larger Pokémon image with circular border */
+.pokemon-image img {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+  border: 5px solid black;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* Info area on the right side */
+.pokemon-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Glassy blocks with rounded tiles */
+.info-block {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #ffffff;
+}
+
+.info-block h3 {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.info-block span,
+.info-block p {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 8px 14px;
+  margin: 4px 6px 4px 0;
+  display: inline-block;
+  font-weight: 600;
+  cursor: default;
+  text-transform: capitalize;
+  min-width: 80px;
+  text-align: center;
+  user-select: none;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .detail-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pokemon-image img {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .pokemon-info {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.type-icons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.type-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  padding: 6px 12px;
+  border-radius: 15px;
+  text-transform: capitalize;
+  font-weight: 600;
+  min-width: 80px;
+  justify-content: center;
+  user-select: none;
+  cursor: default;
+}
+
+.type-icon {
+  width: 175px;
+  height: 32px;
+}
